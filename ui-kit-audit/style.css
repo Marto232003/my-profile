@@ -1,0 +1,82 @@
+/* ---- Design tokens: one source of truth ---- */
+:root {
+  --brand-blue: #2f6fed;
+  --white: #ffffff;
+  --radius: 6px;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #33415c;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #f7f9fc;
+}
+
+/* ---- Layout ---- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--white);
+}
+
+.hero {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.plans {
+  display: flex;
+  gap: 24px;
+  padding: 0 40px 80px 40px;
+}
+
+.footer {
+  padding: 40px;
+  background-color: var(--white);
+  text-align: center;
+}
+
+/* ---- Buttons: one base class + variants ---- */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  border: 2px solid transparent; /* keeps primary and secondary the same height */
+}
+
+.btn-primary {
+  background-color: var(--brand-blue);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--brand-blue);
+  border-color: var(--brand-blue);
+}
+
+/* ---- Card: one component, used twice ---- */
+.card {
+  background-color: var(--white);
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Tag: a different component, left as it was ---- */
+.tag {
+  display: inline-block;
+  background-color: #e8efff;
+  color: var(--brand-blue);
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: bold;
+}
